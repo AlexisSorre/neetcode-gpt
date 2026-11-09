@@ -30,7 +30,7 @@ class Solution:
         loss = np.mean((z2 - y) ** 2)
 
         # backward
-        dz2 = 2 * (z2 - y) / n
+        dz2 = 2*(z2 - y) / n
         dW2 = np.outer(dz2, a1)
         db2 = dz2
         da1 = W2.T @ dz2
