@@ -33,7 +33,7 @@ class Solution:
         dz2 = 2*(z2 - y) / n
         dW2 = np.outer(dz2, a1)
         db2 = dz2
-        da1 = W2.T @ dz2
+        da1 = dz2 @ W2
         dz1 = da1 * (z1 > 0)        # masque binaire
         dW1 = np.outer(dz1, x)
         db1 = dz1
